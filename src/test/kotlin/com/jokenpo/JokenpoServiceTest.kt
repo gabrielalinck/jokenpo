@@ -14,7 +14,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player1 is rock and player2 is scissors player1 wins`() {
         val actual = service.play("rock", "scissors")
-        val expected = "Player 1 wins"
+        val expected = "Rock wins"
 
         assertEquals(expected, actual)
     }
@@ -22,7 +22,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player1 is scissors and player2 is paper player1 wins`() {
         val actual = service.play("scissors", "paper")
-        val expected = "Player 1 wins"
+        val expected = "Scissors wins"
 
         assertEquals(expected, actual)
     }
@@ -30,7 +30,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player1 is paper and player2 is rock player1 wins`() {
         val actual = service.play("paper", "rock")
-        val expected = "Player 1 wins"
+        val expected = "Paper wins"
 
         assertEquals(expected, actual)
     }
@@ -62,7 +62,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player2 is rock and player1 is scissors player2 wins`() {
         val actual = service.play("scissors", "rock")
-        val expected = "Player 2 wins"
+        val expected = "Rock wins"
 
         assertEquals(expected, actual)
     }
@@ -70,7 +70,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player2 is scissors and player1 is paper player2 wins`() {
         val actual = service.play("paper", "scissors")
-        val expected = "Player 2 wins"
+        val expected = "Scissors wins"
 
         assertEquals(expected, actual)
     }
@@ -78,7 +78,7 @@ internal class JokenpoServiceTest {
     @Test
     fun `if player2 is paper and player1 is rock player2 wins`() {
         val actual = service.play("rock", "paper")
-        val expected = "Player 2 wins"
+        val expected = "Paper wins"
 
         assertEquals(expected, actual)
     }
