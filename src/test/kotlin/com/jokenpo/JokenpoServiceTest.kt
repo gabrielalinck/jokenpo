@@ -12,6 +12,30 @@ internal class JokenpoServiceTest {
     private var service: JokenpoService = JokenpoService()
 
     @Test
+    fun `if player1 is invalid and player2 is valid returns invalid move`() {
+        val actual = service.play("invalid", "scissors")
+        val expected = "invalid move"
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `if player1 is valid and player2 is invalid returns invalid move`() {
+        val actual = service.play("rock", "invalid")
+        val expected = "invalid move"
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun `if players are invalid returns invalid move`() {
+        val actual = service.play("invalid", "invalid")
+        val expected = "invalid move"
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
     fun `if player1 is rock and player2 is scissors player1 wins`() {
         val actual = service.play("rock", "scissors")
         val expected = "Rock wins"
